@@ -26,6 +26,11 @@ public class FuncionarioController {
         return this.funcionarioRepository.findAll();
     }
 
+    @GetMapping("/")
+    public String oi(){
+        return "Estudos Devops";
+    }
+
     @PostMapping("/inserir")
     public ResponseEntity<String> inserirFuncionario(@RequestBody Funcionario tr) {
         funcionarioRepository.save(tr);
